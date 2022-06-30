@@ -15,7 +15,7 @@ function App() {
   }, []);
 
   return (
-    <div className="App">
+    <div className="App" style={{ display: "none" }}>
       <h2>
         {eventList.map((event) => (
           <div key={event.eventId}>

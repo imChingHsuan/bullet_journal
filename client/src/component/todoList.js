@@ -11,11 +11,11 @@ function TodoList() {
   const y = d.getFullYear();
   const m = d.getMonth() + 1;
   const day = d.getDate();
-  let yesterday = d.setDate(d.getDate() - 1);
-  yesterday = new Date(yesterday);
+  // let yesterday = d.setDate(d.getDate() - 1);
+  // yesterday = new Date(yesterday);
   const sqlDate = y.toString() + "-" + m.toString() + "-" + day.toString();
   const weather = (e) => {
-    if (e == 0) {
+    if (e === 0) {
       return "rainy";
     } else {
       return "sunny";
@@ -23,10 +23,11 @@ function TodoList() {
   };
   useEffect(() => {
     dispatch(getDateInfo(sqlDate));
-  }, []);
-  useEffect(() => {
     dispatch(getEventInfo(sqlDate));
   }, []);
+  // useEffect(() => {
+  //   dispatch(getEventInfo(sqlDate));
+  // }, []);
   console.log(...dateInfo);
   return (
     <div>
@@ -41,8 +42,8 @@ function TodoList() {
             <div className="weatherWrap">
               <h3>天氣</h3>
               <div className="weatherIcon">
-                {/* {dateInfo.weather == 0 ? "rainy":"sunny" } */}
-                {weather(dateInfo.weather)}
+                {dateInfo.weather === 0 ? "rainy" : "sunny"}
+                {/* {weather(dateInfo.weather)} */}
                 {/* {dateInfo.weather} */}
               </div>
             </div>

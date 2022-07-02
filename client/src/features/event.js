@@ -4,26 +4,6 @@ const initialState = {
 
 const eventReducer = (state = initialState, action) => {
   switch (action.type) {
-    case "eventGet":
-      return {
-        ...state,
-        event: action.payload,
-      };
-    case "eventPost":
-      return {
-        ...state,
-        event: [...state, action.payload],
-      };
-    case "eventDelete":
-      return {
-        ...state,
-        event: action.payload,
-      };
-    case "eventPut":
-      return {
-        ...state,
-        event: action.payload,
-      };
     case "eventInfoGet":
       return {
         ...state,

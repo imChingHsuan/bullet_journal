@@ -1,34 +1,62 @@
 .cardWrap{
     display: flex;
     justify-content: center;
+    letter-spacing: 1px;
 }
 .mainCard{
     background-color: #56C8D8;
     display: flex;
-    min-width: 700px;
+    min-width: 800px;
     border-radius: 20px;
     padding: 20px;
+    margin-top: 50px;
 }
 .detail{
-    width: 50%;
+    width: 40%;
+}
+.date{
+    letter-spacing: 1.2px;
 }
 .weatherWrap{
     display: flex;
     align-items: center;
 }
+.weatherIcon{
+    margin-left: 5px;
+}
 .noteWrap{
     display: flex;
 }
+p.noteText{
+    margin-left: 5px;
+}
 .todoList{
-    width: 50%;
+    width: 60%;
 }
 .bullet{
     display: flex;
     align-items: center;
+    margin: 10px 0;
 }
 .bulletCheck{
     display: block;
     cursor: pointer;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    border: none;
+    background-color: #fff;
+}
+.eTitle{
+    margin-left: 5px;
+    font-weight: 400;
+    font-size: 20px;
+}
+.eReminder{
+    margin-left: 10px;
+    font-weight: 300;
+    color: #403E3E;
+    font-size: 14px;
 }
 .todo{
     display: block;
@@ -36,12 +64,16 @@
 .editBtn, .deleteBtn{
     border: none;
     border-radius: 5px;
+    font-size: 4px;
     color: #fff;
     font-weight: bold;
-    background-color:#418219 ;
+    background-color:#418219;
     padding: 5px;
     margin: 5px;
     cursor: pointer;
+}
+.editBtn{
+    margin-left: 30px;
 }
 .deleteBtn{
     background-color: #E84444;

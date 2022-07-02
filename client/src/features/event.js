@@ -4,25 +4,35 @@ const initialState = {
 
 const eventReducer = (state = initialState, action) => {
   switch (action.type) {
-    case "apiGet":
+    case "eventGet":
       return {
         ...state,
         event: action.payload,
       };
-    case "apiPost":
+    case "eventPost":
       return {
         ...state,
         event: [...state, action.payload],
       };
-    case "apiDelete":
+    case "eventDelete":
       return {
         ...state,
         event: action.payload,
       };
-    case "apiPut":
+    case "eventPut":
       return {
         ...state,
         event: action.payload,
+      };
+    case "eventInfoGet":
+      return {
+        ...state,
+        event: action.payload,
+      };
+    case "checkUpdate":
+      return {
+        ...state,
+        event: [...state, action.payload],
       };
     default:
       return state;

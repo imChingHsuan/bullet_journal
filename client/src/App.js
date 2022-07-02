@@ -5,7 +5,7 @@ import "./App.css";
 
 function App() {
   const dispatch = useDispatch();
-  const eventList = useSelector((state) => state.event);
+  const eventList = useSelector((state) => state.event.event);
   const [date, setDate] = useState("");
   const [title, setTitle] = useState("");
   const [newEvent, setNewEvent] = useState("");
